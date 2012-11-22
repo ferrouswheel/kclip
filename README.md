@@ -9,6 +9,9 @@ It's also not very useful having your notes on Amazon's web site. Amazon make
 some great products and have many strengths, but designing clean consistent UIs
 does not appear to be one of them.
 
+This python module is to simplify the process of doing something with these
+clippings.
+
 ## Why another module??
 
 The format is pretty simple, and there are many other implementations
@@ -58,4 +61,11 @@ if I get around to packaging it.
 >>> prtf.clippings[0].notes
 u'world had developed as Marx expected, the kind of internationalism which he foresaw might have inspired a universal social revolution. Russia, which devel-'
 ```
+
+## TODO
+
+* Make the parse function filter by Book title or author, or Clipping clip_type.
+* Provide an example to load into evernote.
+* Provide hooks to detect when a Kindle is connected via USB for Linux,
+  Windows, and OSX.
 
