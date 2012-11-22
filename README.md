@@ -2,13 +2,19 @@ kclip
 =====
 
 Python module for reading a Kindle's `My Clippings.txt` file. These contain
-highlights and notes made by the user while reading a book.
+highlights and notes made by the user while reading a book on the Kindle platform.
+These apparently get synced and are accessable online if you are using an ebook
+bought through Amazon, but if you sideload stuff by USB you miss this feature.
+It's also not very useful having your notes on Amazon's web site. Amazon make
+some great products and have many strengths, but designing clean consistent UIs
+does not appear to be one of them.
 
-## Why?
+## Why another module??
 
 The format is pretty simple, and there are many other implementations
 out there, but they are either:
-* custom scripts to transform the data to another format, or
+
+* custom (and flaky) gist scripts to transform the data to another format, or
 * they treat all notes as [individual](https://github.com/tswicegood/pyKindle)
   [entries](https://github.com/albins/kindle-clippings-parser) in a single list. There
   may be some cases where this is what you want, but I think clippings are more
