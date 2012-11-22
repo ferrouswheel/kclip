@@ -7,22 +7,24 @@ highlights and notes made by the user while reading a book.
 ## Why?
 
 The format is pretty simple, and there are many other implementations
-out there, but:
-* they are either custom scripts to transform the data to another format], or
+out there, but they are either:
+* custom scripts to transform the data to another format, or
 * they treat all notes as [individual](https://github.com/tswicegood/pyKindle)
   [entries](https://github.com/albins/kindle-clippings-parser) in a single list. There
   may be some cases where this is what you want, but I think clippings are more
-  useful aggregated by article/book
-* or they are just far [more complicated than necessary](https://github.com/gfranxman/Kindle-Clippings-Parser).
-* [use weirdCamelCase](https://github.com/rydjones/Kindle-Clippings-Export)
+  useful aggregated by article/book; or
+* they are just [seem complicated than necessary](https://github.com/gfranxman/Kindle-Clippings-Parser), or
+* they [use weirdCamelCase](https://github.com/rydjones/Kindle-Clippings-Export)
 
 The aim of this module is to be simple. For me, this is just step
-one for getting my clippings into evernote (I know about [ClippingConverter](http://clippingsconverter.com/), but
+one for getting my clippings into evernote (I know about
+[ClippingConverter](http://clippingsconverter.com/), but
 since they sent me my account password in plaintext, there's no way I'm
 trusting access to my evernote account to them!)
 
 I've also opted for a solitary module, and not a package, because it's easier
-to just take the module and use it in a custom script. However, that may change
+to just take the module and use it in a custom script... in fact, it's simple enough
+to just replace main() with your post processing. That may change
 if I get around to packaging it.
 
 ## Usage
