@@ -70,4 +70,6 @@ u'world had developed as Marx expected, the kind of internationalism which he fo
 * Provide an example to load into evernote.
 * Provide hooks to detect when a Kindle is connected via USB for Linux,
   Windows, and OSX.
+* Solicit `My Clippings.txt` examples for testing, since I found a couple of weird
+  ones online. Perhaps the specific format has changed between Kindle versions.
 
