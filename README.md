@@ -3,9 +3,9 @@ kclip
 
 Python module for reading a Kindle's `My Clippings.txt` file. These contain
 highlights and notes made by the user while reading a book on the Kindle platform.
-These apparently get synced and are accessable online if you are using an ebook
-bought through Amazon, but if you sideload stuff by USB you miss this feature.
-It's also not very useful having your notes on Amazon's web site. Amazon make
+Clippings get synced and are accessible online if you are reading an ebook
+bought from Amazon. However, if you sideload stuff by USB you miss this feature.
+Having clippings on Amazon's web site is also not particularly useful. Amazon make
 some great products and have many strengths, but designing clean consistent UIs
 does not appear to be one of them.
 
@@ -14,16 +14,18 @@ clippings.
 
 ## Why another module??
 
-The format is pretty simple, and there are many other implementations
-out there, but they are either:
+The My Clippings format is pretty simple, and there are many other implementations
+out there, so why create another? My reasoning is that they are either:
 
 * custom (and flaky) gist scripts to transform the data to another format, or
 * they treat all notes as [individual](https://github.com/tswicegood/pyKindle)
-  [entries](https://github.com/albins/kindle-clippings-parser) in a single list. There
+  [entries](https://github.com/albins/kindle-clippings-parser) in list. There
   may be some cases where this is what you want, but I think clippings are more
   useful aggregated by article/book; or
-* they are just [seem complicated than necessary](https://github.com/gfranxman/Kindle-Clippings-Parser), or
+* they [seem more complicated than necessary](https://github.com/gfranxman/Kindle-Clippings-Parser), or
 * they [use weirdCamelCase](https://github.com/rydjones/Kindle-Clippings-Export)
+
+All the above libraries were useful in understanding the format, so big thanks!
 
 The aim of this module is to be simple. For me, this is just step
 one for getting my clippings into evernote (I know about
