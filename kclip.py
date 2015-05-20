@@ -224,8 +224,8 @@ if __name__ == "__main__":
                 len(books),
                 sum([len(b.clippings) for b in books.values()])
                 )
-        for book in books:
-            print book
-        import pdb; pdb.set_trace()
-
-
+        for b in books:
+            print books[b].attribution, '-', b, '-', 'Kindle Notes'
+            for clip in books[b].by_time():
+                print clip.display()
+            print "\n\n"
