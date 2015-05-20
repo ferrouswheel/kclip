@@ -45,7 +45,8 @@ class Book(object):
                       self.clippings)
 
     def __repr__(self):
-        return '<Book "%s" by "%s">' % (self.title, self.attribution or "Unknown")
+        c_repr = u'<Book "%s" by "%s">' % (self.title, self.attribution or "Unknown")
+        return c_repr.encode('utf-8')
 
 
 class Clip(object):
@@ -55,16 +56,24 @@ class Clip(object):
         self.clip_type = clip_type
         self.location = location
         self.datetime = datetime
-        self.notes = notes.strip() if notes.strip() else None
+        self.notes = notes.strip() if notes.strip() else ''
+
+    def display(self):
+        c_str = u'%s, %s\n%s\n' % (self.location,
+                self.datetime.strftime(self.DATE_FORMAT), self.notes)
+        return c_str.encode('utf-8')
+
 
     def __str__(self):
-        return '<%s at %s, %s, "%s">' % (self.clip_type,
+        c_str = u'<%s at %s, %s, "%s">' % (self.clip_type,
                 self.datetime.strftime(self.DATE_FORMAT), self.location, self.notes[:10] + '...')
+        return c_str.encode('utf-8')
 
     def __repr__(self):
         # Don't truncate 
-        return '<%s at %s, %s, "%s">' % (self.clip_type,
+        c_repr = u'<%s at %s, %s, "%s">' % (self.clip_type,
                 self.datetime.strftime(self.DATE_FORMAT), self.location, self.notes)
+        return c_repr.encode('utf-8')
 
 KINDLE_FIRST_LINE_NOISE = "\xef\xbb\xbf"
 KINDLE_DIVIDER = '='*10
