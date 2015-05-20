@@ -59,12 +59,12 @@ class Clip(object):
 
     def __str__(self):
         return '<%s at %s, %s, "%s">' % (self.clip_type,
-                self.datetime.strftime(self.DATE_FORMAT), self.location, self.notes[:10] + '...'
+                self.datetime.strftime(self.DATE_FORMAT), self.location, self.notes[:10] + '...')
 
     def __repr__(self):
         # Don't truncate 
         return '<%s at %s, %s, "%s">' % (self.clip_type,
-                self.datetime.strftime(self.DATE_FORMAT), self.location, self.notes
+                self.datetime.strftime(self.DATE_FORMAT), self.location, self.notes)
 
 KINDLE_FIRST_LINE_NOISE = "\xef\xbb\xbf"
 KINDLE_DIVIDER = '='*10
@@ -206,7 +206,6 @@ def parse(filename, syntax=DEFAULT_SYNTAX):
 if __name__ == "__main__":
     import sys
     import doctest
-    from pprint import pprint
 
     doctest.testmod()
 
@@ -218,7 +217,6 @@ if __name__ == "__main__":
                 )
         for book in books:
             print book
-            pprint(books[book].clippings)
         import pdb; pdb.set_trace()
 
 
